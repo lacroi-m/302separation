@@ -5,7 +5,7 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Tue Sep 19 16:35:18 2017 Tom Jeammet
-// Last update Mon Oct  2 08:00:23 2017 ze
+// Last update Mon Oct  2 19:00:37 2017 ze
 //
 
 #ifndef __MAIN_HPP__
@@ -16,8 +16,9 @@
 # include <fstream>
 # include <vector>
 # include <string>
+# include <cstring>
 # include <sstream>
-
 # include "exception.hpp"
 
+std::vector<std::string>        parseNames(std::ifstream &ifs);
 #endif /* ! __MAIN_HPP__ */
