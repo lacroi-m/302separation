@@ -5,11 +5,11 @@
 ## Login   <tom.jeammet@epitech.eu>
 ## 
 ## Started on  Thu Jul 20 10:57:33 2017 Tom Jeammet
-## Last update Mon Oct  9 16:39:50 2017 ze
+## Last update Mon Oct  9 19:56:35 2017 ze
 ##
 
-CPP	= g++ -I./inc
-#CPP	= g++ -I./inc -Wall -Wextra -Werror
+#CPP	= g++ -I./inc
+CPP	= g++ -I./inc -Wall -Wextra -Werror
 NAME	= 302separation
 
 RM	= rm -f

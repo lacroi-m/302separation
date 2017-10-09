@@ -5,7 +5,7 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Oct  9 16:16:46 2017 ze
-// Last update Mon Oct  9 15:41:28 2017 Tom Jeammet
+// Last update Mon Oct  9 19:57:29 2017 ze
 //
 
 #include "main.hpp"
@@ -13,14 +13,15 @@
 void	getSeparation(std::vector<std::string> file, std::string p1, std::string p2)
 {
   int	nbr;
-
+  (void)file;
   nbr = 1;
   std::cout << "degree of separation between " << p1 << " and " << p2 << ": " << nbr << std::endl;
 }
 
 void	getMatrix(std::vector<std::string> file, int sep)
 {
-
+  (void)file;
+  (void)sep;
   std::cout << "print matrix shit" << std::endl;
 }
 
@@ -36,7 +37,9 @@ void	launch(int ac, char **av)
   else
     {
       names = parseNames(file);
-      links = linkNames(av[1], names);
+      links = linkNames(file, names);
+      //      std::cout << "link Names:" << std::endl;
+      //for (size_t x = 0; 
       if (ac == 3)
 	{
 	  if ((isNbr(av[2])) == true)

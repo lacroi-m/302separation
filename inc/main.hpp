@@ -5,7 +5,7 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Tue Sep 19 16:35:18 2017 Tom Jeammet
-// Last update Mon Oct  9 15:36:18 2017 Tom Jeammet
+// Last update Mon Oct  9 19:52:42 2017 ze
 //
 
 #ifndef __MAIN_HPP__
@@ -22,7 +22,7 @@
 
 # include "exception.hpp"
 
-std::vector<std::vector<std::string> >  linkNames(const char *, std::vector<std::string>);
+std::vector<std::vector<std::string> >  linkNames(const std::vector<std::string>, std::vector<std::string>);
 std::vector<std::string>		parseNames(std::vector<std::string>);
 std::vector<std::string>		parseFile(const char *);
 bool					isNbr(std::string);
