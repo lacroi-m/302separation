@@ -5,7 +5,7 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Oct  9 16:16:46 2017 ze
-// Last update Mon Oct  9 17:13:28 2017 Tom Jeammet
+// Last update Mon Oct  9 22:58:37 2017 ze
 //
 
 #include "main.hpp"
@@ -39,6 +39,13 @@ void	launch(int ac, char **av)
     {
       names = parseNames(file);
       links = linkNames(file, names);
+      for (size_t x = 0; x < links.size(); x++)
+	{
+	  std::cerr << "name -> " << names[x] << std::endl;
+	  for (size_t y = 0; y < links[x].size(); y++)
+	    std::cerr << links[x][y] << std::endl;
+	  std::cerr << std::endl;
+	}
       if (ac == 3)
 	{
 	  if ((isNbr(av[2])) == true)
