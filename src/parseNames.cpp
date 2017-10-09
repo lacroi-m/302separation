@@ -5,7 +5,7 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Tue Oct  3 09:32:28 2017 Tom Jeammet
-// Last update Tue Oct  3 12:35:16 2017 Tom Jeammet
+// Last update Mon Oct  9 16:25:23 2017 ze
 //
 
 #include "main.hpp"
@@ -50,8 +50,9 @@ void					print_stab(std::vector<std::string> tab)
 
 */
 
-std::vector<std::string>		parseNames(std::ifstream &ifs)
+std::vector<std::string>		parseNames(const char *file)
 {
+  std::ifstream                         ifs;
   std::vector<std::string>::iterator	it;
   std::vector<std::string>		names;
   std::vector<std::string>		lines;
@@ -60,6 +61,7 @@ std::vector<std::string>		parseNames(std::ifstream &ifs)
   std::string				n2;
   std::size_t				found;
 
+  ifs.open(file);
   std::cout << "MY FONCTION" << std::endl;
   while (std::getline(ifs, tmp))
     lines.push_back(tmp);
