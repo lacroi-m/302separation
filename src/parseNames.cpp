@@ -5,7 +5,7 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Tue Oct  3 09:32:28 2017 Tom Jeammet
-// Last update Mon Oct  9 15:35:21 2017 Tom Jeammet
+// Last update Mon Oct  9 17:11:30 2017 Tom Jeammet
 //
 
 #include "main.hpp"
@@ -49,9 +49,9 @@ std::vector<std::string>		parseNames(std::vector<std::string> file)
   for (it = file.begin(); it != file.end(); it++)
     {
       tmp = *it;
-      found = tmp.find("is friend with ");
+      found = tmp.find(" is friends with ");
       n1 = tmp.substr(0, found);
-      n2 = tmp.substr(found + 17, tmp.size());
+      n2 = tmp.substr(found + 17);
       if (n1.size() != 0 && n2.size() != 0)
 	{
 	  names.push_back(n1);

@@ -5,12 +5,12 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Oct  9 16:12:44 2017 ze
-// Last update Mon Oct  9 16:13:34 2017 ze
+// Last update Mon Oct  9 16:43:37 2017 Tom Jeammet
 //
 
 #include "main.hpp"
 
-bool isNbr(std::string s)
+bool	isNbr(std::string s)
 {
   std::string::const_iterator it = s.begin();
 
@@ -18,5 +18,21 @@ bool isNbr(std::string s)
     ++it;
   if (it == s.end())
     return (true);
+  return (false);
+}
+
+bool	countain_nb(std::string s)
+{
+  char	*str;
+  int	i;
+
+  i = 0;
+  str = (char *)s.c_str();
+  while (str[i] != '\0')
+    {
+      if (str[i] >= '0' && str[i] <= '9')
+	return (true);
+      i = i + 1;
+    }
   return (false);
 }
