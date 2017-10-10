@@ -5,7 +5,7 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Thu Jul 20 22:07:52 2017 Tom Jeammet
-// Last update Tue Sep 26 13:23:46 2017 ze
+// Last update Tue Oct 10 16:58:48 2017 ze
 //
 
 #include "exception.hpp"
@@ -38,5 +38,5 @@ std::string				Err::get_msg(void)
 void					Err::print_msg(void)
 {
   if (this->_msg != "")
-    std::cout << this->_msg << std::endl;
+    std::cerr << this->_msg << std::endl;
 }
