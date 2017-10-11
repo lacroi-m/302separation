@@ -5,7 +5,7 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Oct  9 16:16:46 2017 ze
-// Last update Tue Oct 10 17:54:58 2017 ze
+// Last update Wed Oct 11 13:25:26 2017 ze
 //
 
 #include "main.hpp"
@@ -18,6 +18,8 @@ void    getSeparation(std::vector<std::string> file, std::string p1, std::string
   (void)file;
   std::cout << "degree of separation between " << p1 << " and " << p2 << ": " << nbr << std::endl;
 }
+
+//void	printNbr(size_t x, size_t y, size_t k, std::vector<std::string> names,		 std::vector<std::vector<std::string> > links, int sep)
 
 void	getMatrix(std::vector<std::string> names, std::vector<std::vector<std::string> > links, int sep)
 {
@@ -36,17 +38,45 @@ void	getMatrix(std::vector<std::string> names, std::vector<std::vector<std::stri
 		if (links[x][y] == names[k])
 		  {
 		    std::cout << "1";
+		    if (k != names.size() - 1)
+		      std::cout << " ";
 		    printed = true;
 		    break;
 		  }
 	      }
 	    if (printed == false)
-	      std::cout << "0";
+	      {
+		std::cout << "0";
+		if (k != names.size() - 1)
+		  std::cout << " ";
+	      }
 	    printed = false;
 	  }
       std::cout << std::endl;
     }
+  //  std::cout << std::endl;
+
+  /*  for (size_t x = 0; x < links.size(); x++)
+    {
+      for (size_t k = 0; k < names.size(); k++)
+	{
+	  for (size_t y = 0; y < links[x].size(); y++)
+	    {
+	      if (links[x][y] == names[k])
+		{
+		  std::cout << "1";
+		  printed = true;
+		  break;
+		}
+	    }
+	  if (printed == false)
+	    printNbr(x, y, k, names, links, sep);
+	  printed = false;
+	}
+      std::cout << std::endl;
+      }*/
 }
+
 
 void	launch(int ac, char **av)
 {
