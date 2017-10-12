@@ -5,7 +5,7 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Tue Sep 19 16:35:18 2017 Tom Jeammet
-// Last update Mon Oct  9 17:01:51 2017 Tom Jeammet
+// Last update Thu Oct 12 20:25:58 2017 Tom Jeammet
 //
 
 #ifndef __MAIN_HPP__
@@ -31,4 +31,5 @@ void					checks(int, char **);
 void					launch(int, char **);
 void					print_stab(std::vector<std::string>);
 void					print_vstab(std::vector<std::vector<std::string> >);
+void					getSeparation(std::vector<std::vector<std::string> >, std::vector<std::string>, std::string, std::string);
 #endif /* ! __MAIN_HPP__ */
