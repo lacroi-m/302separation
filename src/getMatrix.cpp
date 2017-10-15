@@ -5,7 +5,7 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Sun Oct 15 20:09:07 2017 Tom Jeammet
-// Last update Sun Oct 15 21:21:12 2017 Tom Jeammet
+// Last update Sun Oct 15 21:41:19 2017 Tom Jeammet
 //
 
 #include "main.hpp"
@@ -70,16 +70,25 @@ void			getMatrix(std::vector<std::vector<std::string> > links, std::vector<std::
 	  if (a != 0)
 	    std::cout << " ";
 	  sep = - 1;
+	  //	  std::cout << tmp << " & " << tmp2 << "::" << std::endl;
 	  if (tmp2.compare(tmp) != 0)
 	    {
 	      searchHisFriend(links, names, &checked, &founded, id, tmp2, sep);
+	      //	      std::cout << " : ";
+	      //	      print_itab(founded);
+	      //	      std::cout << std::endl;
 	      if (founded.size() == 0)
 		std::cout << "0";
 	      else
 		{
 		  sep = getMinSep(founded);
-		  if (sep <= max)
-		    std::cout << sep;
+		  if (sep - 1 <= max)
+		    {
+		      if (sep == 0)
+			std::cout << 1;
+		      else
+			std::cout << sep - 1;
+		    }
 		  else
 		    std::cout << "0";
 		}
