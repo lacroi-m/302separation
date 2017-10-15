@@ -5,12 +5,12 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Oct  9 16:16:46 2017 ze
-// Last update Thu Oct 12 20:27:01 2017 Tom Jeammet
+// Last update Sun Oct 15 20:40:09 2017 Tom Jeammet
 //
 
 #include "main.hpp"
 
-//void	printNbr(size_t x, size_t y, size_t k, std::vector<std::string> names,		 std::vector<std::vector<std::string> > links, int sep)
+/*
 
 void	getMatrix(std::vector<std::string> names, std::vector<std::vector<std::string> > links, int sep)
 {
@@ -47,7 +47,7 @@ void	getMatrix(std::vector<std::string> names, std::vector<std::vector<std::stri
     }
   //  std::cout << std::endl;
 
-  /*  for (size_t x = 0; x < links.size(); x++)
+  for (size_t x = 0; x < links.size(); x++)
     {
       for (size_t k = 0; k < names.size(); k++)
 	{
@@ -65,9 +65,10 @@ void	getMatrix(std::vector<std::string> names, std::vector<std::vector<std::stri
 	  printed = false;
 	}
       std::cout << std::endl;
-      }*/
+      }
 }
 
+*/
 
 void	launch(int ac, char **av)
 {
@@ -82,17 +83,10 @@ void	launch(int ac, char **av)
     {
       names = parseNames(file);
       links = linkNames(file, names);
-      /*      for (size_t x = 0; x < links.size(); x++)
-	{
-	  std::cerr << "name -> " << names[x] << std::endl;
-	  for (size_t y = 0; y < links[x].size(); y++)
-	    std::cerr << links[x][y] << std::endl;
-	  std::cerr << std::endl;
-	  }*/
       if (ac == 3)
 	{
 	  if ((isNbr(av[2])) == true)
-	    getMatrix(names, links, (int)std::atoi(av[2]));
+	    getMatrix(links, names, (int)std::atoi(av[2]));
 	  else
 	    throw (Err("Usage:\n./302separation [file] p1 p2\n./302separation [file] n"));
 	}

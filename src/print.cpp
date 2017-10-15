@@ -5,10 +5,19 @@
 // Login   <tom.jeammet@epitech.eu>
 // 
 // Started on  Mon Oct  9 14:17:28 2017 Tom Jeammet
-// Last update Mon Oct  9 16:01:51 2017 Tom Jeammet
+// Last update Sun Oct 15 20:59:13 2017 Tom Jeammet
 //
 
 #include "main.hpp"
+
+void	print_itab(std::vector<int> tab)
+{
+  std::vector<int>::iterator	it;
+
+  for (it = tab.begin(); it != tab.end(); it++)
+    std::cout << *it << std::endl;
+  std::cout << std::endl;
+}
 
 void	print_stab(std::vector<std::string> tab)
 {
